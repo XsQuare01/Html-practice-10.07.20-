@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>예제용 파일</title>
+        <meta type-equiv= "Content-Type" content= "text/html; charset=utf-8" />
+        <style type= 'text/css'>
+        
+        body{
+            margin: 0;
+            padding:0;
+
+        }
+
+        a{
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        .wrap{
+            width: 960px;
+            margin: 0 auto;
+            background: #eeeeee;
+        }
+
+        .header{
+            background: #888888;
+            padding: 30px;
+        }
+
+        .content{
+            padding: 30px;
+            
+        }
+
+        .h3{
+            /* display: flex;
+            justify-content: center;
+            align-content: center; */
+            margin: 0 auto;
+
+        }
+        
+        .footer{
+            background: #333333;
+            /* position: absolute; */
+            height: 50px;
+            padding: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .footer span{
+            left: 50%;
+            /* position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            display: inline; */
+        }
+
+        .bbsList{
+            width: 100%;
+            border-spacing: 0; /*table 항목 간의 간격을 없애줌.
+            <table class= "bbsList" cellspacing= "0"> 으로도 없애 수 있음.*/
+        }
+
+        .bbsList thead tr th {
+            background: #777777;
+            border-bottom: 2px solid #999999;   /*아래 줄 추가*/
+            border-top: 3px solid #999888;
+            padding: 5px;
+        }
+
+        .bbsList tbody tr td {
+            padding: 10px;
+            border-bottom: 1px solid #bbbbbb;
+            text-align: center;
+            font-size: 12px;
+
+        }
+
+        .bbsList .t_subject {
+            width: 55%;
+            text-align: left;
+            padding-left: 5%;
+        }
+
+        .bbsList .t_author {
+            width: 20%;
+        }
+
+        .bbsList .t_subject .t_comment {
+            font-size: 12px;
+            color: red;
+            margin-left: 3px;
+        }
+
+        .bbsList .t_subject .t_hasImage {
+            background: url("img/hasImage.png") no-repeat;
+            width: 12px;
+            height: 12px;
+            display: inline-block;  /*span: 공간을 차지하지 않음. block만 사용 시 다음 줄로 넘어감*/
+        }
+
+
+        </style>
+    </head>
+    <body>
+        <div class= "wrap">
+            <div class= "header">
+                <div class= "logo"><img src="img/logo.png"></div>
+                <h1>CSS  활용강의</h1>
+                <h2>계시판 만들기</h2>
+
+            </div>
+
+            <div class= "content">
+                <center>
+                    <h3>레이아웃을 만들고 가운데 배치</h3>
+                </center>
+
+                <table class= "bbsList">     <!--게시판-->
+                    <thead>     <!--게시판 head-->
+                        <tr>    <!--게시판 목록-->
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>작성일</th>
+                            <th>조회</th>
+                        </tr>
+                    </thead>
+                    <tbody>     <!--게시판 내용-->
+                        <tr>
+                            <td class= "t_number">  <!--class 사용 이유: 다른 글의 '번호'항목도
+                            같은 영향을 받아야 하므로.-->
+                                1
+                            </td>
+                            <td class= "t_subject">
+                                <a herf="#" title= "게시물 내용">Lächeln, The City of Dreams (꿈의 도시 레헬른)</a>
+                                <span class= "t_comment">[6]</span> <!--댓글 표시-->
+                            </td>
+                            <td class= "t_author">
+                                <a herf="#" title= "작성자">꿈의 도시 레헬른</a>
+                            </td>
+                            <td class= "t_date">
+                                2020.09.22
+                            </td>
+                            <td class= "t_read">
+                                99999
+                            </td>
+                        </tr>
+
+                        <tr>
+                                <td class= "t_number">  <!--class 사용 이유: 다른 글의 '번호'항목도
+                                같은 영향을 받아야 하므로.-->
+                                    2
+                                </td>
+                                <td class= "t_subject">
+                                    <a herf= "#" title= "게시물 내용">The Lake of Oblivion (망각의 호수)</a>
+                                    <span class= "t_comment">[45]</span>
+
+                                </td>
+                                <td class= "t_author">
+                                    <a herf= "#" title= "작성자">소멸의 여로</a>
+                                </td>
+                                <td class= "t_date">
+                                    2020.09.22
+                                </td>
+                                <td class= "t_read">
+                                    99999
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class= "t_number">  <!--class 사용 이유: 다른 글의 '번호'항목도
+                            같은 영향을 받아야 하므로.-->
+                                3
+                            </td>
+                            <td class= "t_subject">
+                                <a herf= "#" title= "게시물 내용">Reverse City (지하선로·연구열차)</a>
+                                <span class= "t_comment">[9]</span>
+                                <span class= "t_hasImage"></span>
+                            
+                            </td>
+                            <td class= "t_author">
+                                <a herf= "#" title= "작성자">리버스 시티</a>
+                            </td>
+                            <td class= "t_date">
+                                2020.09.22
+                            </td>
+                            <td class= "t_read">
+                                99999
+                            </td>
+                        </tr>
+
+                        
+                        <tr>
+                                <td class= "t_number">  <!--class 사용 이유: 다른 글의 '번호'항목도
+                                같은 영향을 받아야 하므로.-->
+                                    4
+                                </td>
+                                <td class= "t_subject">
+                                    <a herf= "#" title= "게시물 내용">Expedition to ChewChew Island (츄츄 빌리지)</a>
+                                    <span class= "t_comment">[8]</span>
+
+                                </td>
+                                <td class= "t_author">
+                                    <a herf= "#" title= "작성자">츄츄 아일랜드</a>
+                                </td>
+                                <td class= "t_date">
+                                    2020.09.22
+                                </td>
+                                <td class= "t_read">
+                                    99999
+                                </td>
+                            </tr>
+
+                        <tr>
+                            <td class= "t_number">  <!--class 사용 이유: 다른 글의 '번호'항목도
+                            같은 영향을 받아야 하므로.-->
+                                5
+                            </td>
+                            <td class= "t_subject">
+                                <a herf= "#" title= "게시물 내용">Mushbud Forest (머쉬버드 숲)</a>
+                                <span class= "t_comment">[68]</span>
+
+                            </td>
+                            <td class= "t_author">
+                                <a herf= "#" title= "작성자">얌얌 아일랜드</a>
+                            </td>
+                            <td class= "t_date">
+                                2020.09.22
+                            </td>
+                            <td class= "t_read">
+                                99999
+                            </td>
+                        </tr>
+                            
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class= "footer">
+                <span style= "color: #eeeeee ">2015.Css활용강좌</span>
+            </div>
+        </div>
+    </body>
+</html>
